@@ -2,7 +2,7 @@
 
 FROM centos:latest
 
-ADD kubernetes /opt/go/src/github.com/GoogleCloudPlatform
+ADD kubernetes /opt/go/src/github.com/GoogleCloudPlatform/kubernetes
 
 RUN yum install -y epel-release make git golang
 ENV GOPATH="/opt/go"
