@@ -6,7 +6,8 @@ ADD kubernetes /opt/go/src/github.com/GoogleCloudPlatform/kubernetes
 
 RUN yum install -y epel-release make git golang
 ENV GOPATH="/opt/go"
-RUN /opt/go/src/github.com/GoogleCloudPlatform/kubernetes;make
+WORKDIR /opt/go/src/github.com/GoogleCloudPlatform/kubernetes
+RUN make
 
 ADD ./src /
 
